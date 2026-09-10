@@ -26,6 +26,8 @@ button, input, textarea { font: inherit; }
 .header-link span, .text-link span, .button span { display: inline-block; margin-left: 8px; color: var(--red); transition: transform 180ms ease; }
 .header-link:hover span, .text-link:hover span, .button:hover span { transform: translateX(4px); }
 .menu-toggle { display: none; border: 0; background: transparent; color: inherit; cursor: pointer; font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.language-select { margin-left: 24px; padding: 6px 22px 6px 0; border: 0; border-bottom: 1px solid currentColor; background: transparent; color: inherit; cursor: pointer; font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.language-select option { color: var(--black); }
 .hero-home { position: relative; min-height: 760px; overflow: hidden; background: var(--black); color: var(--white); }
 .hero-image { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(9,11,12,.9), rgba(9,11,12,.16) 78%), url("images/Jiu-Jitsu-class-at-The-Ottawa-Jiu-Jitsu-Club.webp") center / cover; transform: scale(1.02); animation: slow-zoom 12s ease-out both; }
 .hero-copy { position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: center; min-height: 760px; padding-top: 70px; }
@@ -96,6 +98,7 @@ h2 { font-size: clamp(3.4rem, 6vw, 6.3rem); }
 	.site-nav.open { display: flex; }
 	.site-header:not(.dark) .site-nav { color: var(--black); }
 	.header-link { display: none; }
+	.language-select { margin-left: 20px; }
 	.hero-home, .hero-copy { min-height: 680px; }
 	.hero-caption { right: 20px; bottom: 20px; }
 	.intro-grid, .story-layout, .contact-layout { grid-template-columns: 1fr; gap: 48px; }
