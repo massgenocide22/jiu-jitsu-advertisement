@@ -1,0 +1,115 @@
+:root {
+	--black: #111315;
+	--charcoal: #1b2022;
+	--cream: #f3f0e9;
+	--white: #fbfaf7;
+	--red: #e54832;
+	--red-dark: #b93224;
+	--grey: #737b7d;
+	--line: #d6d3ca;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; background: var(--cream); color: var(--black); font-family: "DM Sans", sans-serif; }
+a { color: inherit; text-decoration: none; }
+button, input, textarea { font: inherit; }
+.page-width { width: min(1180px, calc(100% - 96px)); margin: 0 auto; }
+.site-header { position: absolute; top: 0; left: 0; z-index: 10; display: flex; align-items: center; width: 100%; padding: 26px 48px; color: var(--white); }
+.site-header.dark { color: var(--black); }
+.logo { font-family: "Bebas Neue", sans-serif; font-size: 1.65rem; letter-spacing: .06em; }
+.logo span { color: var(--red); }
+.site-nav { display: flex; gap: 30px; margin: 0 auto; color: rgba(251,250,247,.68); font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.site-header.dark .site-nav { color: var(--grey); }
+.site-nav a { transition: color 180ms ease; }
+.site-nav a:hover, .site-nav .active { color: var(--red); }
+.header-link { border-bottom: 1px solid var(--red); padding-bottom: 5px; font-size: .75rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+.header-link span, .text-link span, .button span { display: inline-block; margin-left: 8px; color: var(--red); transition: transform 180ms ease; }
+.header-link:hover span, .text-link:hover span, .button:hover span { transform: translateX(4px); }
+.menu-toggle { display: none; border: 0; background: transparent; color: inherit; cursor: pointer; font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.hero-home { position: relative; min-height: 760px; overflow: hidden; background: var(--black); color: var(--white); }
+.hero-image { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(9,11,12,.9), rgba(9,11,12,.16) 78%), url("images/Jiu-Jitsu-class-at-The-Ottawa-Jiu-Jitsu-Club.webp") center / cover; transform: scale(1.02); animation: slow-zoom 12s ease-out both; }
+.hero-copy { position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: center; min-height: 760px; padding-top: 70px; }
+.eyebrow { margin: 0 0 22px; color: var(--red); font-size: .68rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.eyebrow.light { color: #ff705b; }
+h1, h2 { margin: 0; font-family: "Bebas Neue", sans-serif; font-weight: 400; letter-spacing: .015em; line-height: .9; text-transform: uppercase; }
+h1 { max-width: 800px; font-size: clamp(5rem, 11vw, 10.5rem); }
+h1 em, h2 em { color: var(--red); font-style: normal; }
+.hero-text { max-width: 430px; margin: 30px 0; color: var(--grey); font-size: 1rem; line-height: 1.7; }
+.hero-copy .hero-text { color: rgba(251,250,247,.76); }
+.button { display: inline-block; width: fit-content; padding: 15px 20px; border: 1px solid var(--red); background: var(--red); color: var(--white); cursor: pointer; font-size: .75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; transition: background 180ms ease, transform 180ms ease; }
+.button:hover { background: var(--red-dark); transform: translateY(-2px); }
+.button-light { border-color: rgba(251,250,247,.65); background: transparent; }
+.button-light:hover { border-color: var(--red); background: var(--red); }
+.hero-caption { position: absolute; right: 48px; bottom: 32px; z-index: 1; color: rgba(251,250,247,.62); font-size: .67rem; letter-spacing: .12em; text-transform: uppercase; }
+.hero-caption span { margin-left: 28px; color: var(--red); }
+.section-pad { padding-top: 110px; padding-bottom: 110px; }
+.section-label { color: var(--red); font-size: .68rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; margin-top: 38px; }
+h2 { font-size: clamp(3.4rem, 6vw, 6.3rem); }
+.large-copy { margin: 0 0 20px; font-family: "Barlow Condensed", sans-serif; font-size: 1.65rem; font-weight: 500; line-height: 1.15; text-transform: uppercase; }
+.intro-grid p:not(.large-copy), .story-copy p, .contact-details p { max-width: 430px; color: var(--grey); font-size: .95rem; line-height: 1.8; }
+.text-link { display: inline-block; margin-top: 24px; padding-bottom: 7px; border-bottom: 1px solid var(--red); font-size: .75rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+.feature-section { background: var(--charcoal); color: var(--white); }
+.feature-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin: 38px 0; }
+.feature-heading .text-link { color: var(--white); }
+.feature-image { position: relative; height: min(58vw, 650px); overflow: hidden; }
+.feature-image img { width: 100%; height: 100%; object-fit: cover; opacity: .88; }
+.image-note { position: absolute; right: 22px; bottom: 20px; color: var(--white); font-size: .67rem; letter-spacing: .12em; text-transform: uppercase; }
+.page-hero { padding-top: 190px; padding-bottom: 90px; }
+.page-hero h1 { max-width: 900px; font-size: clamp(5rem, 12vw, 11rem); }
+.page-hero .hero-text { margin-bottom: 0; }
+.story-layout, .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; }
+.story-photo { height: 620px; overflow: hidden; }
+.story-photo img { width: 100%; height: 100%; object-fit: cover; }
+.story-copy h2, .contact-details h2 { margin: 20px 0 26px; font-size: clamp(3.5rem, 5vw, 5.5rem); }
+.quote-section { padding: 100px 0; background: var(--red); color: var(--white); }
+.quote { max-width: 900px; margin: 0; font-family: "Bebas Neue", sans-serif; font-size: clamp(3.2rem, 7vw, 7rem); line-height: .9; text-transform: uppercase; }
+.quote-credit { margin: 26px 0 0; color: rgba(251,250,247,.75); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; }
+.schedule-hero { padding-bottom: 70px; }
+.schedule { padding-top: 0; }
+.schedule-intro { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 35px; }
+.schedule-intro h2 { font-size: clamp(3.5rem, 6vw, 6rem); }
+.schedule-intro p { max-width: 330px; margin: 0; color: var(--grey); font-size: .9rem; line-height: 1.7; }
+.schedule-table { border-top: 2px solid var(--black); }
+.class-row { display: grid; grid-template-columns: 1.1fr 1fr 1.4fr .7fr; gap: 20px; align-items: center; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.class-row > * { margin: 0; }
+.class-day { color: var(--red); font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.class-name { font-family: "Barlow Condensed", sans-serif; font-size: 1.5rem; font-weight: 600; text-transform: uppercase; }
+.class-time, .class-level { color: var(--grey); font-size: .8rem; }
+.class-level { text-align: right; }
+.contact-hero { padding-bottom: 80px; }
+.contact-email { display: inline-block; margin: 28px 0 10px; border-bottom: 1px solid var(--red); font-family: "Barlow Condensed", sans-serif; font-size: 1.8rem; text-transform: uppercase; }
+.contact-address { font-size: .8rem !important; }
+.contact-form { display: flex; flex-direction: column; gap: 22px; padding: 42px; background: var(--white); }
+.contact-form label { color: var(--grey); font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.contact-form input, .contact-form textarea { display: block; width: 100%; margin-top: 9px; padding: 12px 0; border: 0; border-bottom: 1px solid var(--line); outline: 0; background: transparent; color: var(--black); resize: vertical; }
+.contact-form input:focus, .contact-form textarea:focus { border-color: var(--red); }
+.form-status { margin: 0; color: var(--red); font-size: .8rem; }
+.site-footer { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 32px 48px; border-top: 1px solid var(--line); color: var(--grey); font-size: .72rem; }
+.site-footer p { margin: 0; }
+@keyframes slow-zoom { from { transform: scale(1.1); } to { transform: scale(1.02); } }
+@media (max-width: 760px) {
+	.page-width { width: min(100% - 40px, 560px); }
+	.site-header { padding: 22px 20px; }
+	.menu-toggle { display: block; margin-left: auto; padding: 8px 0; }
+	.site-nav { position: absolute; top: 70px; right: 20px; display: none; flex-direction: column; gap: 18px; padding: 20px; background: var(--white); box-shadow: 0 12px 30px rgba(0,0,0,.16); }
+	.site-nav.open { display: flex; }
+	.site-header:not(.dark) .site-nav { color: var(--black); }
+	.header-link { display: none; }
+	.hero-home, .hero-copy { min-height: 680px; }
+	.hero-caption { right: 20px; bottom: 20px; }
+	.intro-grid, .story-layout, .contact-layout { grid-template-columns: 1fr; gap: 48px; }
+	.section-pad { padding-top: 78px; padding-bottom: 78px; }
+	.feature-heading, .schedule-intro { align-items: start; flex-direction: column; }
+	.feature-image { height: 70vw; }
+	.page-hero { padding-top: 150px; padding-bottom: 65px; }
+	.story-photo { height: 420px; }
+	.class-row { grid-template-columns: 1fr 1fr; gap: 10px; padding: 18px 0; }
+	.class-time, .class-level { text-align: left; }
+	.class-name { grid-column: 1 / -1; grid-row: 2; }
+	.class-time { grid-column: 1; grid-row: 3; }
+	.class-level { grid-column: 2; grid-row: 3; }
+	.contact-form { padding: 28px 22px; }
+	.site-footer { align-items: flex-start; flex-direction: column; padding: 30px 20px; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
